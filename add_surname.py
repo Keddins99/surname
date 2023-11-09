@@ -1,6 +1,9 @@
-def add_surname(first_names):
-    return [name + " Kardashian" for name in first_names if name.startswith("K")]
+def add_surname(first_names_list):
+    full_list = [name+' Kardashian' for name in first_names_list if name[0]=='K']
 
-original_names = ["Kiki", "Krystal", "Pavel", "MaryKay", "Annie", "Koala"]
-modified_names = add_surname(original_names)
-print(modified_names)
+    return full_list
+
+
+first_names_list = ["Kiki", "Krystal", "Pavel", "Annie", "Koala"]
+
+print(add_surname(first_names_list))
